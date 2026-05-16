@@ -7,8 +7,10 @@ const app = express()
 const PORT = process.env.PORT || 3001
 
 // ── CORS ──────────────────────────────────────────────────────────────────────
-// Allows any origin — no tokens, fully public API
-app.use(cors())
+// Allow specific origins
+app.use(cors({
+  origin: ['https://www.shaheendevelopers.in', 'http://localhost:3000']
+}))
 
 app.use(express.json())
 
