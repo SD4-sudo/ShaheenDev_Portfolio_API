@@ -2,20 +2,15 @@ import 'dotenv/config'
 import express from 'express'
 import cors from 'cors'
 import contactRouter from './routes/contact.js'
+import careerRouter from './routes/career.js'
 
 const app = express()
 const PORT = process.env.PORT || 3001
 
-// ── CORS ──────────────────────────────────────────────────────────────────────
-// Allow specific origins
-app.use(cors({
-  origin: ['https://www.shaheendevelopers.in', 'http://localhost:3000']
-}))
-
+app.use(cors())
 app.use(express.json())
 
-// ── Health check ─────────────────────────────────────────────────────────────
-// Used by Render's health check ping
+// Health check
 app.get('/', (_req, res) => {
   res.json({
     status: 'ok',
@@ -24,15 +19,16 @@ app.get('/', (_req, res) => {
   })
 })
 
-// ── Routes ────────────────────────────────────────────────────────────────────
+// Routes
 app.use('/api/contact', contactRouter)
+app.use('/api/career', careerRouter)   // ← new
 
-// ── 404 fallback ─────────────────────────────────────────────────────────────
+// 404
 app.use((_req, res) => {
   res.status(404).json({ error: 'Route not found' })
 })
 
-// ── Global error handler ──────────────────────────────────────────────────────
+// Global error handler
 app.use((err, _req, res, _next) => {
   const status = err.statusCode ?? 500
   const message = err.statusMessage ?? err.message ?? 'Internal Server Error'
