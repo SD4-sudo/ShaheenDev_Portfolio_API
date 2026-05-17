@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>New Job Application — Shaheen Developers</title>
+</head>
+
+<body style="margin:0;padding:0;background:#f0f0f0;font-family:Arial,Helvetica,sans-serif;">
+
+  <table width="100%" cellpadding="0" cellspacing="0" style="background:#f0f0f0;padding:40px 16px;">
+    <tr>
+      <td align="center">
+
+        <table width="600" cellpadding="0" cellspacing="0"
+               style="max-width:600px;width:100%;border-radius:12px;overflow:hidden;box-shadow:0 4px 24px rgba(0,0,0,0.12);">
+
+          <!-- HEADER -->
+          <tr>
+            <td style="background:linear-gradient(135deg,#e53935 0%,#b71c1c 100%);padding:28px 32px 24px;">
+              <span style="font-size:28px;font-weight:800;color:#ffffff;letter-spacing:0.5px;font-family:Arial,Helvetica,sans-serif;">
+                Shaheen Developers
+              </span>
+            </td>
+          </tr>
+
+          <!-- ALERT BANNER -->
+          <tr>
+            <td style="background:#fff1f0;padding:16px 32px;border-left:5px solid #e53935;border-bottom:1px solid #fdd;">
+              <p style="margin:0;font-size:14px;font-weight:800;color:#c62828;letter-spacing:0.2px;">
+                New Job Application
+              </p>
+              <p style="margin:2px 0 0;font-size:12px;color:#e57373;font-weight:400;">
+                A candidate has submitted their application via the careers page
+              </p>
+            </td>
+          </tr>
+
+          <!-- BODY -->
+          <tr>
+            <td style="background:#ffffff;padding:32px 32px 24px;">
+
+              <p style="margin:0 0 28px;font-size:14px;color:#444444;line-height:1.75;border-left:3px solid #e53935;padding-left:14px;">
+                You have received a job application from
+                <strong style="color:#2d2d2d;">{{fullName}}</strong>.
+                Their résumé is attached to this email.
+              </p>
+
+              <!-- Details table -->
+              <table width="100%" cellpadding="0" cellspacing="0" style="border-collapse:collapse;">
+
+                <!-- Name -->
+                <tr>
+                  <td width="120" style="padding:13px 16px 13px 0;border-bottom:1px solid #f2f2f2;font-size:10px;font-weight:700;color:#999999;text-transform:uppercase;letter-spacing:0.8px;vertical-align:top;">
+                    Name
+                  </td>
+                  <td style="padding:13px 0;border-bottom:1px solid #f2f2f2;font-size:14px;font-weight:700;color:#2d2d2d;vertical-align:top;">
+                    {{fullName}}
+                  </td>
+                </tr>
+
+                <!-- Email -->
+                <tr>
+                  <td style="padding:13px 16px 13px 0;border-bottom:1px solid #f2f2f2;font-size:10px;font-weight:700;color:#999999;text-transform:uppercase;letter-spacing:0.8px;vertical-align:top;">
+                    Email
+                  </td>
+                  <td style="padding:13px 0;border-bottom:1px solid #f2f2f2;vertical-align:top;">
+                    <a href="mailto:{{email}}" style="color:#e53935;text-decoration:none;font-size:14px;font-weight:600;">
+                      {{email}}
+                    </a>
+                  </td>
+                </tr>
+
+                <!-- Phone -->
+                <tr>
+                  <td style="padding:13px 16px 13px 0;border-bottom:1px solid #f2f2f2;font-size:10px;font-weight:700;color:#999999;text-transform:uppercase;letter-spacing:0.8px;vertical-align:top;">
+                    Phone
+                  </td>
+                  <td style="padding:13px 0;border-bottom:1px solid #f2f2f2;font-size:14px;color:#444444;vertical-align:top;">
+                    {{phone}}
+                  </td>
+                </tr>
+
+                <!-- Résumé -->
+                <tr>
+                  <td style="padding:13px 16px 13px 0;border-bottom:1px solid #f2f2f2;font-size:10px;font-weight:700;color:#999999;text-transform:uppercase;letter-spacing:0.8px;vertical-align:top;">
+                    Résumé
+                  </td>
+                  <td style="padding:13px 0;border-bottom:1px solid #f2f2f2;font-size:14px;color:#444444;vertical-align:top;">
+                    <span style="display:inline-block;background:#fff1f0;color:#e53935;font-size:11px;font-weight:700;padding:4px 10px;border-radius:4px;border:1px solid #fdd;">
+                      📎 Attached
+                    </span>
+                  </td>
+                </tr>
+
+                <!-- Message -->
+                <tr>
+                  <td style="padding:13px 16px 13px 0;font-size:10px;font-weight:700;color:#999999;text-transform:uppercase;letter-spacing:0.8px;vertical-align:top;">
+                    About
+                  </td>
+                  <td style="padding:13px 0;font-size:14px;color:#444444;line-height:1.75;vertical-align:top;">
+                    {{message}}
+                  </td>
+                </tr>
+
+              </table>
+
+              <!-- Delivered-by box -->
+              <table width="100%" cellpadding="0" cellspacing="0"
+                     style="margin-top:28px;border-radius:8px;overflow:hidden;border:1px solid #eeeeee;">
+                <tr>
+                  <td style="background:linear-gradient(90deg,#e53935,#c62828);height:4px;font-size:0;line-height:0;">&nbsp;</td>
+                </tr>
+                <tr>
+                  <td style="background:#fafafa;padding:14px 18px;">
+                    <table width="100%" cellpadding="0" cellspacing="0">
+                      <tr>
+                        <td style="vertical-align:middle;">
+                          <p style="margin:0 0 3px;font-size:12px;font-weight:800;color:#2d2d2d;letter-spacing:0.2px;">Email Delivered by:</p>
+                          <p style="margin:0;font-size:12px;color:#e53935;font-weight:600;">Shaheen Developers CMS</p>
+                          <p style="margin:4px 0 0;font-size:11px;color:#aaaaaa;">On: {{deliveredAt}}</p>
+                        </td>
+                        <td align="right" style="vertical-align:middle;">
+                          <img src="https://pub-4073fd5b337344249e057b7aafa6bb8a.r2.dev/l.png"
+                               alt="Shaheen Developers" style="height:50px;display:block;" />
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+
+            </td>
+          </tr>
+
+          <!-- FOOTER -->
+          <tr>
+            <td style="background:#f7f7f7;padding:18px 32px;border-top:1px solid #ebebeb;">
+              <p style="margin:0 0 6px;font-size:11px;color:#888888;line-height:1.65;">
+                <strong style="color:#666666;">Disclaimer:</strong>
+                This is an automatically generated email — please do not reply to it.
+                The information transmitted is intended only for the person or entity to which it is addressed.
+              </p>
+              <p style="margin:0;font-size:11px;color:#bbbbbb;">
+                Automated &nbsp;&middot;&nbsp;
+                Shaheen Developers &nbsp;&middot;&nbsp;
+                <a href="https://shaheendevelopers.in" style="color:#e53935;text-decoration:none;">shaheendevelopers.in</a>
+              </p>
+            </td>
+          </tr>
+
+        </table>
+      </td>
+    </tr>
+  </table>
+
+</body>
+</html>
